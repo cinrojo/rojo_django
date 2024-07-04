@@ -1,0 +1,17 @@
+{% extends "home/base.html" %}
+{% block content %}
+<!-- Contenedor principal para la actualización de opiniones -->
+<div class="container mt-3">
+    <!-- Título de la sección -->
+    <h2>Actualizar Opinion</h2>
+    <!-- Inicio del formulario -->
+    <form method="post">
+        <!-- Protección CSRF (Cross-Site Request Forgery) -->
+        {% csrf_token %}
+        <!-- Renderiza el formulario como párrafos -->
+        {{form.as_p}}
+        <!-- Botón para enviar el formulario -->
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>
+{% endblock %}

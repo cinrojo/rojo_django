@@ -1,0 +1,13 @@
+{% extends "home/base.html" %}
+
+{% block content %}
+<div class="container mt-3">
+    <h2>Actualizar Categoría</h2>
+    <h3>Nombre actual: {{ form.instance.name }}</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+    </form>
+</div>
+{% endblock %}

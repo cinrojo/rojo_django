@@ -1,0 +1,13 @@
+{% extends "home/base.html" %}
+{% block content %}
+<div class="container mt-3">
+    <h2>Crear Categoria</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="">Nombre</label>
+        {{form.name }}
+        
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+</div>
+{% endblock %}
